@@ -3,7 +3,7 @@
 Manipulação de array de objetos sendo possível filtrar as informações por tarefas, tarefas concluídas, tarefas por id.
 
 ### Tecnologias utilizadas:
-- JavaScript
+- JavaScript;
 - Framework express para gerenciamento das requisições;
 - Ferramenta nodemon para atualização da aplicação cada vez que um arquivo do projeto for modificado;
 - Ferramenta postman para testar as requisições.
