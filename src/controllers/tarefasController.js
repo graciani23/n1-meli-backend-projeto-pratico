@@ -25,3 +25,15 @@ exports.getNomeId = (req, res) => {
     const nomeFunc = nomeId.nomeColaborador
     res.status(200).send(nomeFunc)
 }
+
+tarefas.sort(function(a, b) {
+    if (a.dataInclusao > b.dataInclusao) {
+        return 1;
+    }
+    if (a.dataInclusao < b.dataInclusao) {
+        return -1;
+    }
+    return 0;
+})
+
+console.log(tarefas)
