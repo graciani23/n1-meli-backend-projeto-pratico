@@ -19,6 +19,12 @@ exports.getNome = (req, res) => {
     res.status(200).send(nome)
 }
 
+exports.getNomeId = (req, res) => {
+    const id = req.params.id
+    const nomeId = tarefas.find(item => item.id == id)
+    const nomeFunc = nomeId.nomeColaborador
+    res.status(200).send(nomeFunc)
+}
 
 exports.getNomeColab = (req, res) => {
     const nome = req.params.nome
@@ -27,18 +33,12 @@ exports.getNomeColab = (req, res) => {
 }
 
 
-
 function transformarConclusaoEmData(conclusao) {
     const conclusaoSplitada = conclusao.split('/')
     const conclusaoNova = new Date(conclusaoSplitada[2], conclusaoSplitada[1] - 1, conclusaoSplitada[0])
     return conclusaoNova
-
-exports.getNomeId = (req, res) => {
-    const id = req.params.id
-    const nomeId = tarefas.find(item => item.id == id)
-    const nomeFunc = nomeId.nomeColaborador
-    res.status(200).send(nomeFunc)
 }
+
 
 function transformarInclusaoEmData(inclusao) {
     const inclusaoSplitada = inclusao.split('/')
