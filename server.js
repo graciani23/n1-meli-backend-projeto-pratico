@@ -2,5 +2,5 @@ const app = require("./src/app")
 const port = 7000
 
 app.listen(port, function() {
-    console.log(`app está rodando na porta ${port}`)
+    console.log(`Servidor está rodando na porta ${port}`)
 })
