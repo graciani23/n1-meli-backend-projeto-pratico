@@ -29,27 +29,37 @@ console.log(array[0].data)
 
 // console.log(ordenados)
 
-/*
 
-function FormataStringData(data) {
-    var dia  = data.split("/")[0];
-    var mes  = data.split("/")[1];
-    var ano  = data.split("/")[2];
+
+// function FormataStringData(data) {
+//     var dia  = data.split("/")[0];
+//     var mes  = data.split("/")[1];
+//     var ano  = data.split("/")[2];
   
-    return ano + '-' + ("0"+mes).slice(-2) + '-' + ("0"+dia).slice(-2);
+//     return ano + '-' + ("0"+mes).slice(-2) + '-' + ("0"+dia).slice(-2);
     // Utilizo o .slice(-2) para garantir o formato com 2 digitos.
   }
   
   
-  console.log(FormataStringData(array[0].date));
-  */
+  // console.log(FormataStringData(array[0].data));
+  /*
 
-  function getFormattedDate(date) {
-    let year = date.getFullYear();
-    let month = (1 + date.getMonth()).toString().padStart(2, '0');
-    let day = date.getDate().toString().padStart(2, '0');
+//   function getFormattedDate(date) {
+//     let year = date.getFullYear();
+//     let month = (1 + date.getMonth()).toString().padStart(2, '0');
+//     let day = date.getDate().toString().padStart(2, '0');
   
-    return month + '/' + day + '/' + year;
-}
+//     return month + '/' + day + '/' + year;
+// }
 
-console.log(getFormattedDate(array[0].data))
+// console.log(getFormattedDate(array[0].data))
+
+function FormataStringData(data) {
+  var dia  = data.split("/")[0];
+  var mes  = data.split("/")[1];
+  var ano  = data.split("/")[2];
+
+  return ano + '-' + ("0"+mes).slice(-2) + '-' + ("0"+dia).slice(-2);
+
+  console.log(FormataStringData(array[0]))
+  */
